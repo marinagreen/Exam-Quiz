@@ -6,7 +6,10 @@
 
 
 <!-- Recources Page -->
+
+
 <h2>Level 1 - Russian Numbers</h2>
+
 <p> One - "A-deen" - один </p>
 <p> Two - "Dva" - два </p>
 <p> Three - "Tri" - три </p>
@@ -18,18 +21,34 @@
 <p> Nine - "Dev-yat" - девять </p>
 <p> Ten - "Des-yat" - десять</p>
 
-<h2>Level 2 - Russian Greetings</h2>
-<p>Hello (Informal) - "Dratz-vuy-chor" - </p>
-<p>Hello (Formal) - "Pri-vi-et" - </p>
-<p>How are you? (Informal) - "Kak De-la" - </p>
-<p>How are you? (Formal) - "Kak Vashi De-la" - </p>
-<p>I'm good - "Ya Kha-ra-shor" - </p>
-<p>I'm tired - "Ya Uti-Blak"</p>
-<p>I'm hungry - "Ya </p>
-<p>What is your name? - </p>
-<p>My name is (Name) - "Men ya za-vout (Name)" - </p>
+<p></p>
 
-<h2>Level 3 - Extra Greetings</h2>
-<p>Good Morning - "Do-bre U-tra"</p>
-<p>Good Day - "Do-bre De-in"</p>
-<p>Good Afternoon - "Do-bre Vet-cher"</p>
+<h2>Level 2 - Russian Colours</h2>
+
+<p> Red - "krast-nyi" - красный </p>
+<p> Green - "ze-lyo-nyi" - зелёный </p>
+<p> Yellow - "zhyol-tyi" - жёлтый</p>
+<p> Light Blue - "goluboi" - голубой</p>
+<p> Dark Blue - "sinii" - синий </p>
+<p> Black - "chyor-nyi" - чёрный</p>
+<p> White - "bel-yi" - белый</p>
+<p> Orange - "oranzhevyi" - оранжевый</p>
+<p> Pink - "rozo-vyi" - розовый </p>
+<p> Purple - "fioleto-vyi" - фиолетовый </p>
+
+<p></p>
+
+<h2>Level 3 - Russian Greetings</h2>
+
+
+<p>Hello (Informal) - "Pri-vi-et" - Привет</p>
+<p>Hello (Formal) - "Dratz-vuy-chor" - здороваться</p>
+<p>How are you? (Informal) - "Kak De-la" - как дела?</p>
+<p>How are you? (Formal) - "Kak Vashi De-la" - как ваши дела</p>
+<p>I'm good - "Ya Kha-ra-shor" - я хороший</p>
+<p>I'm tired - "Ya U-stal" - я устал</p> 
+<p>What is your name? - как вас зовут?</p>
+<p>My name is (Name) - "Men ya za-vout (Name)" - меня зовут (имя)</p>
+<p>Goodbye (Informal) - "Poka-Poka" - пока пока</p>
+<p>Goodbye (Formal) - "Das-va-dan-ya" - 
+до свидания</p>
