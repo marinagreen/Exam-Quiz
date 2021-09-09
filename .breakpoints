@@ -7,6 +7,14 @@
         "version": 1,
         "index": 198
       }
+    ],
+    "src/App.svelte": [
+      {
+        "id": "caa98acd-9bc1-40ea-a171-a1b58a85c861",
+        "line": 2,
+        "version": 3455,
+        "index": 9
+      }
     ]
   }
 }

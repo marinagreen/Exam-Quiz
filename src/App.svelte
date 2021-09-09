@@ -1,8 +1,27 @@
 <script>
-import resources from './Resource.svelte';
+// import resources from './Resource.svelte';
+// import level1questions from './level1.svelte';
+let score = 0;
+let level = ''
+// let first = ''
+// let second = ''
+//let third = ''
 
-let first = ''
+//  function btnCheck() {
+//   {#if level === 'easy'}
+// 	{level1questions}
+// {:else if level === 'medium'}
+// 	{level2questions}
+// {:else if first === 'hard'}
+// 	{level3questions}
+// {:else} 
+// <p>Please choose a level.</p>
+// {/if}
+//  }
 
+// function Level() {
+// 	// <p>{score}</p>
+// }
 </script>
 
 <!-- Choose Level, e.g. 1,2,3, > resource page for the level shows, once ready begin -->
@@ -12,14 +31,18 @@ let first = ''
 
 <!-- 1ST QUESTION - "How do you say..." -->
 
-<!-- Level 1 : Question 1
-How do you say one in Russian?
-a. "a-deen", b."voy-shem", c. "dva" -->
+<!-- Select level button -->
 
-<!-- Level 2 : Question 1
-How do you say red?
-a. "gulaboi", b."zillo-nyi", c. "krast-nyi" -->
+<h3>Select Your Level</h3>
 
-<!-- Level 3 : Question 1 
-How do you say hello (formal)?
-a. "privet", b."dratzvutyre", c. "kak dela" -->
+
+
+<select name="level" id="level">
+  <option value="easy">Easy</option>
+  <option value="medium">Medium</option>
+  <option value="hard">Hard</option>
+</select>
+
+<button on:click={btnCheck}>
+	Confirm
+</button>
