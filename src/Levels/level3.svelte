@@ -5,7 +5,6 @@
 <h3>Level 3 : Question 1</h3>
 <p>How do you say hello (formal)?</p>
 
-
 <label>
 	<input type='radio' bind:group={third} value='one'>
 	A. "Privet"
