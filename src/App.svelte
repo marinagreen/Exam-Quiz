@@ -1,10 +1,9 @@
 <script>
-// import resources from './Resource.svelte';
-// import level1questions from './level1.svelte';
 
 let score = 0;
 let result = ''
-// let level = ''
+let result1=''
+let result2=''
 
 let first = ''
 let second = ''
@@ -14,30 +13,19 @@ let forth = ''
 let name = ''
 let yes = ''
 let no = ''
-let result1=''
-let result2=''
-
-// SELECT LEVEL FUNCTION
-// function btnCheck() {
-// if (level === ('easy')){
-// //     level1questions
-// } else if (level === ('medium')){
-// // 	   level2questions
-// } else if (level === ('hard')){
-// //     level3questions
-// } else {
-//         'Please choose a level.'
-// }}
 
 // CHECK BUTTON FUCTION (for multiple choice q's)
 function check(a){
+// if chosen answer has the value of 'one', answer = correct and point is added to the score.
   if (a.includes('one')){
-    result = 'Correct'
+    result = ' --> Correct !!'
     score += 1
+// else if chosen answer doesnt have the value of 'one', answer = incorrect and no point is added.
   } else {
-    result = 'Wrong'
+    result = '--> Incorrect.'
   }
 
+//seperates each answer for each question.
   	if (a.includes('Q1')) {
 				result1 = result
 		} else if (a.includes('Q2')) {
@@ -57,32 +45,16 @@ function check(a){
 //   result = 'Wrong."'
 // }
 
+
+
 </script>
 
-<!-- CHOOSE LEVEL 1,2, OR 3. SHOWS RESOURCE AND QUESTIONS BASED ON YOUR ANSWER. -->
-<!-- <h3>Select Your Level</h3>
+<h1>RUSSIAN LANGUAGE QUIZ</h1>
 
-<select name="level" id="level">
-  <option value="easy">Easy</option>
-  <option value="medium">Medium</option>
-  <option value="hard">Hard</option>
-</select>
-
-<!-- SELECT LEVEL BUTTON -->
-<!-- <button on:click={btnCheck}>
-	Confirm
-</button>  --> -->
-
-<!--BTN STARTS, REMOVES RESOURCES, SHOWS FIRST QUESTION, ONCE ANSWERED, REMOVES QUESTION & SHOWS NEXT QUESTION, REPEATS.-->
-
-
-
-
-<h3> --------------------------------- </h3>
-
+<br>
 
 <!-- 1ST QUESTION - "How do you say..." -->
-<h3>Level 1 : Question 1</h3>
+<h3>QUESTION 1:</h3>
 <p>How do you say "one" / "1" in Russian?</p>
 
 
@@ -106,16 +78,16 @@ function check(a){
 
 {result1}
 <br>
-<p> Score: {score}</p>
+<p> Score: {score} / 10</p>
 
 
 
-<h3> --------------------------------- </h3>
+<br>
 
 
 
 <!-- QUESTION 2: -->
-<h3>Level 1 : Question 2</h3>
+<h3>QUESTION 2:</h3>
 <p>Which number is "Voy-shem" in English?</p>
 
 <label>
@@ -138,15 +110,17 @@ function check(a){
 
 {result2}
 <br>
-<p> Score: {score}</p>
-
-<h3> --------------------------------- </h3>
+<p> Score: {score} / 10</p>
 
 
 
 
+<br>
 
-<h3>Level 1 : Question 3</h3>
+
+
+
+<h3>QUESTION 3:</h3>
 <p>Which number is "A-deen" in English?</p>
 
 <!-- <input id="question3" type="text"/> -->
@@ -156,16 +130,20 @@ function check(a){
 	Confirm
 </button> 
 <br>
-<p> Score: {score}</p>
+<p> Score: {score} / 10</p>
 
 
 
-<!-- <h3> --------------------------------- </h3>
+<br>
 
-<h3>Level 1 Question 4</h3>
+
+
+
+
+<h3>QUESTION 4:</h3>
 <p>True or False...?</p>
 
-
+<!-- 
 <label>
 	<input type='radio' bind:group={forth} value='yes'>
 	True! 
