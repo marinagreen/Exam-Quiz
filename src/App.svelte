@@ -2,8 +2,9 @@
 
 let score = 0;
 let result = ''
-let result1=''
-let result2=''
+let result1 = ''
+let result2 = ''
+let result3 = ''
 
 let first = ''
 let second = ''
@@ -18,23 +19,30 @@ let no = ''
 function check(a){
 // if chosen answer has the value of 'one', answer = correct and point is added to the score.
   if (a.includes('one')){
-    result = ' --> Correct !!'
+    result = 'Correct !!'
     score += 1
 // else if chosen answer doesnt have the value of 'one', answer = incorrect and no point is added.
   } else {
-    result = '--> Incorrect.'
-  }
+    result = 'Incorrect.'
+}
 
 //seperates each answer for each question.
-  	if (a.includes('Q1')) {
-				result1 = result
-		} else if (a.includes('Q2')) {
-				result2 = result
-		} 
+if (a.includes('Q1')) {
+			result1 = result
+	} else if (a.includes('Q2')) {
+			result2 = result
+	} 
 				
 }
 
-
+function confirm(b) { 
+  if (name === 'one','1'){
+    result3 = 'Correct !!'
+    score += 1
+  } else {
+    result3 = 'Wrong.'
+  }
+}
 
 // CHECK BUTTON FUNCTION (for text input q's)
 // function btnConfirm1() {
@@ -124,19 +132,15 @@ function check(a){
 <p>Which number is "A-deen" in English?</p>
 
 <!-- <input id="question3" type="text"/> -->
-<input id="third" value={name}>
+<input type='text' bind:value={name} placeholder ='enter answer'>
 
-<button on:click={btnConfirm1}>
-	Confirm
-</button> 
-<br>
+<button on:click={confirm(name)}>Confirm</button> 
+{result3}
 <p> Score: {score} / 10</p>
 
 
 
 <br>
-
-
 
 
 
