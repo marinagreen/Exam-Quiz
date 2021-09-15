@@ -105,6 +105,8 @@ function check(a){
 <button on:click={check(first)}> Check </button>
 
 {result1}
+<br>
+<p> Score: {score}</p>
 
 
 
@@ -132,9 +134,11 @@ function check(a){
 </label>
 
 <p></p>
-<button on:click={check(first)}> Check </button>
+<button on:click={check(second)}> Check </button>
 
 {result2}
+<br>
+<p> Score: {score}</p>
 
 <h3> --------------------------------- </h3>
 
@@ -151,6 +155,9 @@ function check(a){
 <button on:click={btnConfirm1}>
 	Confirm
 </button> 
+<br>
+<p> Score: {score}</p>
+
 
 
 <!-- <h3> --------------------------------- </h3>
