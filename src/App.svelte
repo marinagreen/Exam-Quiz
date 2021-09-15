@@ -2,14 +2,20 @@
 
 let score = 0;
 let result = ''
-let result1 = ''
-let result2 = ''
-let result3 = ''
 
 let first = ''
 let second = ''
 let third = ''
 let forth = ''
+let fifth = ''
+let sixth = ''
+
+let result1 = ''
+let result2 = ''
+let result3 = ''
+let result4 = ''
+let result5 = ''
+let result6 = ''
 
 let name = ''
 let yes = ''
@@ -31,8 +37,13 @@ if (a.includes('Q1')) {
 			result1 = result
 	} else if (a.includes('Q2')) {
 			result2 = result
-	} 
-				
+	} else if (a.includes('Q4')) {
+      result4 = result
+  } else if (a.includes('Q5')) {
+      result5 = result
+  } else if (a.includes('Q6')) {
+      result6 = result
+  }
 }
 
 function confirm(b) { 
@@ -132,7 +143,7 @@ function confirm(b) {
 <p>Which number is "A-deen" in English?</p>
 
 <!-- <input id="question3" type="text"/> -->
-<input type='text' bind:value={name} placeholder ='enter answer'>
+<input type='text' bind:value={name} placeholder ='Enter a number'>
 
 <button on:click={confirm(name)}>Confirm</button> 
 {result3}
@@ -145,29 +156,90 @@ function confirm(b) {
 
 
 <h3>QUESTION 4:</h3>
-<p>True or False...?</p>
+<p>True or False, (Enter Question Here)?</p>
 
-<!-- 
+
 <label>
-	<input type='radio' bind:group={forth} value='yes'>
+	<input type='radio' bind:group={forth} value='Q4one'>
 	True! 
 </label>
 
 <label>
-	<input type='radio' bind:group={forth} value='no'>
+	<input type='radio' bind:group={forth} value='Q4two'>
 	False! 
 </label>
 
-{#if forth === yes}
-	<p>Correct!</p>
-{:else if forth === no}
-	<p>Incorrect!</p>
-  {:else}
-  <p>Please choose an answer.</p>
-{/if}
-
 <p></p>
 
-<button on:click={btnConfirm2}>
-	Confirm
-</button>  -->
+<button on:click={check(forth)}>Check</button>
+{result4}
+<p> Score: {score} / 10</p>
+
+<br>
+
+<h3>QUESTION 5:</h3>
+<p>Placeholder</p>
+
+
+<label>
+	<input type='radio' bind:group={fifth} value='Q5two'>
+	A. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={fifth} value='Q5one'>
+	B. Right
+</label>
+
+<label>
+  <input type='radio' bind:group={fifth} value='Q5three'>
+  C. Wrong
+</label>
+
+<p></p>
+<button on:click={check(fifth)}> Check </button>
+
+{result5}
+<br>
+<p> Score: {score} / 10</p>
+
+<br>
+
+
+<h3>QUESTION 6:</h3>
+<p>Placeholder</p>
+
+
+<label>
+	<input type='radio' bind:group={sixth} value='Q6three'>
+	A. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={sixth} value='Q6two'>
+	B. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={sixth} value='Q6one'>
+  C. Right
+</label>
+
+<p></p>
+<button on:click={check(sixth)}> Check </button>
+
+{result6}
+<p> Score: {score} / 10</p>
+
+<br>
+
+
+<!-- <h3>QUESTION 7:</h3>
+<p>Placeholder</p>
+
+<!-- <input id="question3" type="text"/> -->
+<!-- <input type='text' bind:value={name} placeholder ='Enter a number'>
+
+<button on:click={confirm1(name)}>Confirm</button> 
+{result7}
+<p> Score: {score} / 10</p> --> -->
