@@ -1,44 +1,66 @@
 <script>
 // import resources from './Resource.svelte';
 // import level1questions from './level1.svelte';
+
 let score = 0;
-let level = ''
+let result = ''
+// let level = ''
+
 let first = ''
 let second = ''
 let third = ''
+let forth = ''
+
 let name = ''
+let yes = ''
+let no = ''
+let result1=''
+let result2=''
 
-//  function btnCheck() {
-//   {#if level === 'easy'}
-// 	  {level1questions}
-//  {:else if level === 'medium'}
-// 	  {level2questions}
-// {:else if first === 'hard'}
-//  	{level3questions}
-// {:else} 
-//    <p>Please choose a level.</p>
-// {/if}
-//  }
+// SELECT LEVEL FUNCTION
+// function btnCheck() {
+// if (level === ('easy')){
+// //     level1questions
+// } else if (level === ('medium')){
+// // 	   level2questions
+// } else if (level === ('hard')){
+// //     level3questions
+// } else {
+//         'Please choose a level.'
+// }}
 
+// CHECK BUTTON FUCTION (for multiple choice q's)
+function check(a){
+  if (a.includes('one')){
+    result = 'Correct'
+    score += 1
+  } else {
+    result = 'Wrong'
+  }
 
-function btnConfirm1() {
- {#if name === 'one'}
-	<p>Incorrect, the answer was "8".</p>
-{:else if name === 'two'}
-	<p>Correct!</p>
-   Score: {score+1}
- {:else if name === 'three'}
-	<p>Incorrect, the answer was "8".</p>
-{:else} 
-  <p>Please choose an answer.</p>
-{/if} 
+  	if (a.includes('Q1')) {
+				result1 = result
+		} else if (a.includes('Q2')) {
+				result2 = result
+		} 
+				
 }
 
 
+
+// CHECK BUTTON FUNCTION (for text input q's)
+// function btnConfirm1() {
+//  if (name === 'one')
+//  result = 'Correct!'
+//  score =+1
+// } else {
+//   result = 'Wrong."'
+// }
+
 </script>
 
-<!-- Choose Level, e.g. 1,2,3, > resource page for the level shows, once ready begin -->
-<h3>Select Your Level</h3>
+<!-- CHOOSE LEVEL 1,2, OR 3. SHOWS RESOURCE AND QUESTIONS BASED ON YOUR ANSWER. -->
+<!-- <h3>Select Your Level</h3>
 
 <select name="level" id="level">
   <option value="easy">Easy</option>
@@ -46,45 +68,48 @@ function btnConfirm1() {
   <option value="hard">Hard</option>
 </select>
 
-<!-- Select level button
+<!-- SELECT LEVEL BUTTON -->
 <!-- <button on:click={btnCheck}>
 	Confirm
-</button> --> 
+</button>  --> -->
 
-<!--Btn start, gets rid of resouce page, shows first question, once answered, removes question and shows the next question, repeats until ten questions.-->
+<!--BTN STARTS, REMOVES RESOURCES, SHOWS FIRST QUESTION, ONCE ANSWERED, REMOVES QUESTION & SHOWS NEXT QUESTION, REPEATS.-->
 
-<h3> -- </h3>
+
+
+
+<h3> --------------------------------- </h3>
 
 
 <!-- 1ST QUESTION - "How do you say..." -->
 <h3>Level 1 : Question 1</h3>
 <p>How do you say "one" / "1" in Russian?</p>
 
+
 <label>
-	<input type='radio' bind:group={first} value='one'>
+	<input type='radio' bind:group={first} value='Q1one'>
 	A. "A-deen"
 </label>
 
 <label>
-  <input type='radio' bind:group={first} value='two'>
+  <input type='radio' bind:group={first} value='Q1two'>
 	B. "Voy-shem"
 </label>
 
 <label>
-  <input type='radio' bind:group={first} value='three'>
+  <input type='radio' bind:group={first} value='Q1three'>
   C. "Dva"
 </label>
 
-{#if first === 'one'}
-	<p>Correct!</p>
-  Score: {score=+1}
-{:else if first === 'two'}
-	<p>Incorrect, the answer was "A-deen".</p>
- {:else if first === 'three'}
-	<p>Incorrect, the answer was "A-deen".</p>
-{:else} 
-  <p>Please choose an answer.</p>
-{/if}
+<p></p>
+<button on:click={check(first)}> Check </button>
+
+{result1}
+
+
+
+<h3> --------------------------------- </h3>
+
 
 
 <!-- QUESTION 2: -->
@@ -92,51 +117,68 @@ function btnConfirm1() {
 <p>Which number is "Voy-shem" in English?</p>
 
 <label>
-	<input type='radio' bind:group={second} value='one'>
+	<input type='radio' bind:group={second} value='Q2two'>
 	A. "5"
 </label>
 
 <label>
-  <input type='radio' bind:group={second} value='two'>
+  <input type='radio' bind:group={second} value='Q2one'>
 	B. "8"
 </label>
 
 <label>
-  <input type='radio' bind:group={second} value='three'>
+  <input type='radio' bind:group={second} value='Q2three'>
   C. "3"
 </label>
 
-{#if second === 'one'}
-	<p>Incorrect, the answer was "8".</p>
-{:else if second === 'two'}
-	<p>Correct!</p>
-   Score: {score+1}
- {:else if second === 'three'}
-	<p>Incorrect, the answer was "8".</p>
-{:else} 
-  <p>Please choose an answer.</p>
-{/if}
+<p></p>
+<button on:click={check(first)}> Check </button>
+
+{result2}
+
+<h3> --------------------------------- </h3>
+
+
+
 
 
 <h3>Level 1 : Question 3</h3>
 <p>Which number is "A-deen" in English?</p>
 
 <!-- <input id="question3" type="text"/> -->
-<input id="question3" value={name}>
+<input id="third" value={name}>
 
 <button on:click={btnConfirm1}>
 	Confirm
 </button> 
 
-<!-- {#if question3 === 'one'}
-	<p>Incorrect, the answer was "8".</p>
-{:else if question3 === 'two'}
+
+<!-- <h3> --------------------------------- </h3>
+
+<h3>Level 1 Question 4</h3>
+<p>True or False...?</p>
+
+
+<label>
+	<input type='radio' bind:group={forth} value='yes'>
+	True! 
+</label>
+
+<label>
+	<input type='radio' bind:group={forth} value='no'>
+	False! 
+</label>
+
+{#if forth === yes}
 	<p>Correct!</p>
-   Score: {score+1}
- {:else if question3 === 'three'}
-	<p>Incorrect, the answer was "8".</p>
-{:else} 
+{:else if forth === no}
+	<p>Incorrect!</p>
+  {:else}
   <p>Please choose an answer.</p>
-{/if} -->
+{/if}
 
+<p></p>
 
+<button on:click={btnConfirm2}>
+	Confirm
+</button>  -->
