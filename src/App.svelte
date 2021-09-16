@@ -3,23 +3,28 @@
 let score = 0;
 let result = ''
 
-let first = ''
-let second = ''
-let third = ''
-let forth = ''
-let fifth = ''
-let sixth = ''
+let first, second, third, forth, fifth, 
+sixth, seventh, eighth, ninth, tenth = ''
+
 
 let result1 = ''
-let result2 = ''
+let result2 = '' 
 let result3 = ''
 let result4 = ''
 let result5 = ''
 let result6 = ''
+let result7 = ''
+let result8 = ''
+let result9 = ''
+let result10 = ''
+
+
 
 let name = ''
+let name1 = ''
 let yes = ''
 let no = ''
+
 
 // CHECK BUTTON FUCTION (for multiple choice q's)
 function check(a){
@@ -43,9 +48,12 @@ if (a.includes('Q1')) {
       result5 = result
   } else if (a.includes('Q6')) {
       result6 = result
+  } else if (a.includes('Q8')) {
+      result8 = result
   }
 }
 
+// CHECK BUTTON FUNCTION (for text input q's)
 function confirm(b) { 
   if (name === 'one','1'){
     result3 = 'Correct !!'
@@ -55,16 +63,34 @@ function confirm(b) {
   }
 }
 
-// CHECK BUTTON FUNCTION (for text input q's)
-// function btnConfirm1() {
-//  if (name === 'one')
-//  result = 'Correct!'
-//  score =+1
-// } else {
-//   result = 'Wrong."'
+function confirm1(c) { 
+  if (name1 === 'one','1'){
+    result3 = 'Correct !!'
+    score += 1
+  } else {
+    result3 = 'Wrong.'
+  }
+}
+
+// while (score < 5) {
+//   message = "You did well! Thanks for playing" 
+//   if  (score > 5) 
+//   message = "Good try! Thanks for playing"
 // }
+	
+// let message = ''
+// let message1 = 'You did well! Thanks for playing.'
+// let message2 = 'You got them all correct! Well done.'
+// let message3 = 'Have you answered all the questions? Feel free to try again!'
 
-
+// while (score === 0) {
+// 	  message = message3 
+//  ( score < 10) 
+//     message = message1
+//  (score === 10 ) 
+//     message = message2
+// }
+	
 
 </script>
 
@@ -142,7 +168,6 @@ function confirm(b) {
 <h3>QUESTION 3:</h3>
 <p>Which number is "A-deen" in English?</p>
 
-<!-- <input id="question3" type="text"/> -->
 <input type='text' bind:value={name} placeholder ='Enter a number'>
 
 <button on:click={confirm(name)}>Confirm</button> 
@@ -234,12 +259,88 @@ function confirm(b) {
 <br>
 
 
-<!-- <h3>QUESTION 7:</h3>
+<h3>QUESTION 7:</h3>
 <p>Placeholder</p>
 
-<!-- <input id="question3" type="text"/> -->
-<!-- <input type='text' bind:value={name} placeholder ='Enter a number'>
+<input type='text' bind:value={name1} placeholder ='Enter a number'>
 
-<button on:click={confirm1(name)}>Confirm</button> 
+<button on:click={confirm1(name1)}>Confirm</button> 
 {result7}
-<p> Score: {score} / 10</p> --> -->
+<p> Score: {score} / 10</p>
+
+<br>
+
+
+<h3>QUESTION 8:</h3>
+<p>True or False, (Enter Question Here)?</p>
+
+<label>
+	<input type='radio' bind:group={eighth} value='Q8two'>
+	True! 
+</label>
+
+<label>
+	<input type='radio' bind:group={eighth} value='Q8one'>
+	False! 
+</label>
+<br><br>
+<button on:click={check(eighth)}> Check </button>
+{result8}
+<p> Score: {score} / 10</p>
+
+<br>
+
+<h3>QUESTION 9:</h3>
+<p>Placeholder</p>
+
+
+<label>
+	<input type='radio' bind:group={ninth} value='Q9two'>
+	A. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={ninth} value='Q9three'>
+	B. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={ninth} value='Q9one'>
+  C. Right
+</label>
+
+<br><br>
+<button on:click={check(ninth)}> Check </button>
+{result9}
+<p> Score: {score} / 10 </p>
+
+<br>
+
+
+<h3>QUESTION 10:</h3>
+<p>Placeholder</p>
+
+
+<label>
+	<input type='radio' bind:group={tenth} value='Q10one'>
+	A. Right
+</label>
+
+<label>
+  <input type='radio' bind:group={ninth} value='Q10three'>
+	B. Wrong
+</label>
+
+<label>
+  <input type='radio' bind:group={ninth} value='Q10two'>
+  C. Wrong
+</label>
+
+<br><br>
+<button on:click={check(tenth)}> Check </button>
+{result10}
+<p> Score: {score} / 10 </p>
+
+<br>
+
+<!-- <h3>{message}</h3> -->
