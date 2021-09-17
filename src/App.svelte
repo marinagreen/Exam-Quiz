@@ -2,6 +2,8 @@
 
 let score = 0;
 let result = ''
+let message = ''
+let message1 = 'Thanks for playing!'
 
 let first, second, third, forth, fifth, 
 sixth, seventh, eighth, ninth, tenth = ''
@@ -55,7 +57,7 @@ if (a.includes('Q1')) {
 
 // CHECK BUTTON FUNCTION (for text input q's)
 function confirm(b) { 
-  if (name === 'one','1'){
+  if (name === 'one'){
     result3 = 'Correct !!'
     score += 1
   } else {
@@ -64,7 +66,7 @@ function confirm(b) {
 }
 
 function confirm1(c) { 
-  if (name1 === 'one','1'){
+  if (name1 === 'two'){
     result3 = 'Correct !!'
     score += 1
   } else {
@@ -72,25 +74,10 @@ function confirm1(c) {
   }
 }
 
-// while (score < 5) {
-//   message = "You did well! Thanks for playing" 
-//   if  (score > 5) 
-//   message = "Good try! Thanks for playing"
+// while (score > 5) {
+//   message = message1
 // }
-	
-// let message = ''
-// let message1 = 'You did well! Thanks for playing.'
-// let message2 = 'You got them all correct! Well done.'
-// let message3 = 'Have you answered all the questions? Feel free to try again!'
 
-// while (score === 0) {
-// 	  message = message3 
-//  ( score < 10) 
-//     message = message1
-//  (score === 10 ) 
-//     message = message2
-// }
-	
 
 </script>
 
@@ -181,7 +168,7 @@ function confirm1(c) {
 
 
 <h3>QUESTION 4:</h3>
-<p>True or False, (Enter Question Here)?</p>
+<p>True or False, Privet is the informal what to say hello.</p>
 
 
 <label>
@@ -203,22 +190,22 @@ function confirm1(c) {
 <br>
 
 <h3>QUESTION 5:</h3>
-<p>Placeholder</p>
+<p>How do you say "How are you?" (formally) in Russian?</p>
 
 
 <label>
 	<input type='radio' bind:group={fifth} value='Q5two'>
-	A. Wrong
+	A. Kak Dela
 </label>
 
 <label>
   <input type='radio' bind:group={fifth} value='Q5one'>
-	B. Right
+	B. Kak Vashi Dela
 </label>
 
 <label>
   <input type='radio' bind:group={fifth} value='Q5three'>
-  C. Wrong
+  C. Kak Vashi
 </label>
 
 <p></p>
@@ -232,22 +219,22 @@ function confirm1(c) {
 
 
 <h3>QUESTION 6:</h3>
-<p>Placeholder</p>
+<p>Dratzvutyue means what in English?</p>
 
 
 <label>
 	<input type='radio' bind:group={sixth} value='Q6three'>
-	A. Wrong
+	A. Hi (Informal)
 </label>
 
 <label>
   <input type='radio' bind:group={sixth} value='Q6two'>
-	B. Wrong
+	B. Good Morning
 </label>
 
 <label>
   <input type='radio' bind:group={sixth} value='Q6one'>
-  C. Right
+  C. Hello (Formal)
 </label>
 
 <p></p>
@@ -260,7 +247,7 @@ function confirm1(c) {
 
 
 <h3>QUESTION 7:</h3>
-<p>Placeholder</p>
+<p>Which number is "Dva"?</p>
 
 <input type='text' bind:value={name1} placeholder ='Enter a number'>
 
@@ -272,7 +259,7 @@ function confirm1(c) {
 
 
 <h3>QUESTION 8:</h3>
-<p>True or False, (Enter Question Here)?</p>
+<p>True or False, "Dobre Utra" means: Good Day?</p>
 
 <label>
 	<input type='radio' bind:group={eighth} value='Q8two'>
@@ -291,22 +278,22 @@ function confirm1(c) {
 <br>
 
 <h3>QUESTION 9:</h3>
-<p>Placeholder</p>
+<p>"Das-va-dan-ya" mean what?</p>
 
 
 <label>
 	<input type='radio' bind:group={ninth} value='Q9two'>
-	A. Wrong
+	A. See you later
 </label>
 
 <label>
   <input type='radio' bind:group={ninth} value='Q9three'>
-	B. Wrong
+	B. Bye
 </label>
 
 <label>
   <input type='radio' bind:group={ninth} value='Q9one'>
-  C. Right
+  C. Goodbye
 </label>
 
 <br><br>
@@ -318,22 +305,22 @@ function confirm1(c) {
 
 
 <h3>QUESTION 10:</h3>
-<p>Placeholder</p>
+<p>What does "Menya zavout (...)..." mean?</p>
 
 
 <label>
 	<input type='radio' bind:group={tenth} value='Q10one'>
-	A. Right
+	A. My name is (...)...
 </label>
 
 <label>
-  <input type='radio' bind:group={ninth} value='Q10three'>
-	B. Wrong
+  <input type='radio' bind:group={tenth} value='Q10three'>
+	B. I am (...)
 </label>
 
 <label>
-  <input type='radio' bind:group={ninth} value='Q10two'>
-  C. Wrong
+  <input type='radio' bind:group={tenth} value='Q10two'>
+  C. I'm from (...)
 </label>
 
 <br><br>
@@ -343,4 +330,4 @@ function confirm1(c) {
 
 <br>
 
-<!-- <h3>{message}</h3> -->
+<h3>{message}</h3>
