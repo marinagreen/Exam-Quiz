@@ -2,8 +2,10 @@
 
 // Score & Result output
 let score = 0;
+let count = 0;
 let result = ''
-
+let message = ''
+let message1 = 'Thanks for playing!'
 
 // category for each question
 let first, second, third, forth, fifth, 
@@ -25,6 +27,7 @@ let result10 = ''
 // Text Questions and True or False Outputs
 let name = ''
 let name1 = ''
+
 
 
 // CHECK BUTTON FUCTION (for multiple choice q's)
@@ -84,6 +87,11 @@ function confirm1(c) {
   }
 }
 
+while(count < 10) {
+    message = message1;
+    count++;
+}
+		
 </script>
 
 <h1>RUSSIAN LANGUAGE QUIZ</h1>
@@ -363,4 +371,4 @@ function confirm1(c) {
 <br>
 
 
-<h3>Thanks for Playing!</h3>
+<h3>{message}</h3>
