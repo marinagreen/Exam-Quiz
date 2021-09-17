@@ -60,6 +60,9 @@ function confirm(b) {
   if (name === 'one'){
     result3 = 'Correct !!'
     score += 1
+  } else if (name === '1'){
+    result3 = 'Correct !!'
+    score += 1
   } else {
     result3 = 'Wrong.'
   }
@@ -67,6 +70,9 @@ function confirm(b) {
 
 function confirm1(c) { 
   if (name1 === 'two'){
+    result3 = 'Correct !!'
+    score += 1
+  } else if (name === '2'){
     result3 = 'Correct !!'
     score += 1
   } else {
