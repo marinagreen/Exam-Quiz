@@ -25,8 +25,6 @@ let result10 = ''
 // Text Questions and True or False Outputs
 let name = ''
 let name1 = ''
-let yes = ''
-let no = ''
 
 
 // CHECK BUTTON FUCTION (for multiple choice q's)
@@ -53,8 +51,11 @@ if (a.includes('Q1')) {
       result6 = result
   } else if (a.includes('Q8')) {
       result8 = result
-  }
-}
+  } else if (a.includes('Q9')) {
+      result9 = result
+  } else if (a.includes('Q10')) {
+      result10 = result
+}}1
 
 // CHECK BUTTON FUNCTIONS (for text input q's)
 // question 3 code.
@@ -79,10 +80,9 @@ function confirm1(c) {
     result7 = 'Correct !!'
     score += 1
   } else {
-    result7 = 'Wrong.'
+    result7 = 'Wrong.' 
   }
 }
-
 
 </script>
 
