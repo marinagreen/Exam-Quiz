@@ -72,14 +72,14 @@ function confirm(b) {
 
 //question 7 code
 function confirm1(c) { 
-  if (name1 === 'two'){
-    result3 = 'Correct !!'
+  if (name1 === 'two') {
+    result7 = 'Correct !!'
     score += 1
-  } else if (name === '2'){
-    result3 = 'Correct !!'
+  } else if (name === '2') {
+    result7 = 'Correct !!'
     score += 1
   } else {
-    result3 = 'Wrong.'
+    result7 = 'Wrong.'
   }
 }
 
